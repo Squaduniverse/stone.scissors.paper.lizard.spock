@@ -1,0 +1,65 @@
+import random
+
+print ("Start Game *Stone Scissors Paper Lizard Spock*")
+print ("Choose Please: Stone (r), Scissors (s), Paper (p), Lizard (l), Spock (v)")
+
+table = input ("Your Choice:")
+#print(table)
+
+choice = ["r", "s", "p", "l", "v"]
+
+if table in choice:
+
+	random.shuffle(choice)
+	computer = choice[0]
+	print("Computer: " + computer)
+
+	if computer == choice:
+		print("draw")
+	if computer == "r" and choice == "s":
+		print("You won!")
+	if computer == "r" and choice == "p":
+		print("You lost!")
+	if computer == "r" and choice == "l":
+		print("You won!")
+	if computer == "r" and choice == "v":
+		print("You lost!")
+
+	if computer == "s" and choice == "r":
+		print("You lost!")
+	if computer == "s" and choice == "p":
+		print("You won!")
+	if computer == "s" and choice == "l":
+		print("You won!")
+	if computer == "s" and choice == "v":
+		print("You lost!")
+
+	if computer == "p" and choice == "r":
+		print("You won!")
+	if computer == "p" and choice == "s":
+		print("You lost!")
+	if computer == "p" and choice == "l":
+		print("You lost!")
+	if computer == "p" and choice == "v":
+		print("You won!")
+
+	if computer == "l" and choice == "r":
+		print("You lost!")
+	if computer == "l" and choice == "s":
+		print("You lost!")
+	if computer == "l" and choice == "p":
+		print("You won!")
+	if computer == "l" and choice == "v":
+		print("You won!")
+
+	if computer == "v" and choice == "r":
+		print("You won!")
+	if computer == "v" and choice == "s":
+		print("You won!")
+	if computer == "v" and choice == "p":
+		print("You lost!")
+	if computer == "v" and choice == "l":
+		print("You lost!")
+
+else:
+	print ("Wrong choice")
