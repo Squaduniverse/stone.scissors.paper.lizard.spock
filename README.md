@@ -3,17 +3,31 @@ When you can't decide who will start first in the game. Then there is only one o
 Cuando no puedes decidir quién comenzará primero en el juego. Entonces solo hay una opción:
 # stone.scissors.paper.lizard.spock
 
+# Blogs
+(Installing private Python packages in Docker images)[https://medium.com/packagr/installing-private-python-packages-in-a-docker-images-fb1872409ed0]
+
+(Performing an HTTP Request in Python Tutorial)[https://www.datacamp.com/tutorial/making-http-requests-in-python]
+
+(The Right Way to Build an API with Python)[https://towardsdatascience.com/the-right-way-to-build-an-api-with-python-cd08ab285f8f]
+
+
 # information content
 
-env environment used for python app
+bin runer bin used to start commands or programs, our case run_app, example make-person
 
-flash_app the api http that use flash
+build folder used for bin
 
-package example package
+env environment used for python 
+
+flash_app the api http that use flash, we will use this app to expose the http process 
+
+package example package in on blog to show how to set up environment and docker file
 
 Dockerfile instructions that build a image
 
 Make file has the steps used to generate the environment for a python service
+
+setup.py this file is used to make the build using wheel in make file is the command
 
 SSPES.txt python logic stone.scissors.paper.lizard.spock
 
