@@ -1,0 +1,4 @@
+#!/usr/bin/env python
+from flash_app import app
+
+app.run()
