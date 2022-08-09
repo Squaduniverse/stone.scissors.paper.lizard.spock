@@ -1,14 +1,17 @@
 Wenn Sie sich nicht entscheiden können, wer zuerst im Spiel beginnt. Dann gibt es nur eine Möglichkeit:
+
 When you can't decide who will start first in the game. Then there is only one option: 
+
 Cuando no puedes decidir quién comenzará primero en el juego. Entonces solo hay una opción:
+
 # stone.scissors.paper.lizard.spock
 
 # Blogs
-(Installing private Python packages in Docker images)[https://medium.com/packagr/installing-private-python-packages-in-a-docker-images-fb1872409ed0]
+[Installing private Python packages in Docker images](https://medium.com/packagr/installing-private-python-packages-in-a-docker-images-fb1872409ed0)
 
-(Performing an HTTP Request in Python Tutorial)[https://www.datacamp.com/tutorial/making-http-requests-in-python]
+[Performing an HTTP Request in Python Tutorial](https://www.datacamp.com/tutorial/making-http-requests-in-python)
 
-(The Right Way to Build an API with Python)[https://towardsdatascience.com/the-right-way-to-build-an-api-with-python-cd08ab285f8f]
+[The Right Way to Build an API with Python](https://towardsdatascience.com/the-right-way-to-build-an-api-with-python-cd08ab285f8f)
 
 
 # information content
