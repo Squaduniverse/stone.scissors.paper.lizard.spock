@@ -48,7 +48,14 @@ install-whell:
 	python setup.py bdist_wheel
 
 
-# install wheel (to build packages in the bdist_wheel format)
-pip install wheel
-# create the package
-python setup.py bdist_wheel
+### Comands to run the python programs
+
+# run game - make run-game
+.PHONY:
+run-game:
+	python process/SSPES.py
+
+# run game - make run-api
+.PHONY:
+run-api:
+	python process/API.py
