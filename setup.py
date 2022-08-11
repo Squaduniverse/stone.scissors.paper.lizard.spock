@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name='stone.scissors.paper.lizard.spock',  # the name of the package
     version='1.0',
-    packages=['package', 'flash_app', 'SSPES.txt'],  # contains our actual code
+    packages=['process'],  # contains our actual code
     author='',
     author_email='',
     description='stone.scissors.paper.lizard.spock',
