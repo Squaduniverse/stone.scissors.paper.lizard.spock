@@ -6,6 +6,26 @@ Cuando no puedes decidir quién comenzará primero en el juego. Entonces solo ha
 
 # stone.scissors.paper.lizard.spock
 
+# To run this app in local
+
+download the project
+command line
+git clone [repo]()
+
+after placing the item
+if you have python installed
+then it will be alone
+run the next line
+
+python process/API.py
+
+and with this
+from your browser
+you could use the following
+URL
+
+http://localhost:3000/?choice=r
+
 # Blogs
 [Installing private Python packages in Docker images](https://medium.com/packagr/installing-private-python-packages-in-a-docker-images-fb1872409ed0)
 

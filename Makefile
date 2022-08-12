@@ -50,12 +50,17 @@ install-whell:
 
 ### Comands to run the python programs
 
-# run game - make run-game
+# run game in console - make run-game-console
 .PHONY:
-run-game:
+run-game-console:
 	python process/SSPES.py
 
 # run game - make run-api
 .PHONY:
 run-api:
 	python process/API.py
+
+# run game - make run-game-console
+.PHONY:
+run-game:
+	python process/game.py
