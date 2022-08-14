@@ -1,54 +1,50 @@
-##  Steps to ... Docker file with variables
-
-# 
-# Blogs
-# Installing private Python packages in Docker images
-# https://medium.com/packagr/installing-private-python-packages-in-a-docker-images-fb1872409ed0
-
-# Performing an HTTP Request in Python Tutorial
-# https://www.datacamp.com/tutorial/making-http-requests-in-python
-
-# The Right Way to Build an API with Python
-# https://towardsdatascience.com/the-right-way-to-build-an-api-with-python-cd08ab285f8f
-
-# install Faker
 .PHONY:
-etwas-so:
-	python3 -m venv env
-	source env/bin/activate
 
+create-environment:
+	virtualenv environment
 
-# create a virtual environment, and activate it
-.PHONY:
-install-faker:
-	pip install Faker
+steps:
+	pip3 install Flask
+#   pip freeze  --local > requirements.txt
+# 	pip3 freeze | grep Flask >> requirements.txt
+# 	touch app.py
 
-# create a virtual environment, and activate it
-.PHONY:
-install-faker:
-	pip install Faker
+install-requirements:
+	pip3 install -r requirements.txt
 
-# WARNING: You are using pip version 22.0.4; however, version 22.2.2 is available.
-# You should consider upgrading via the '/Users/revi/dev/Squaduniverse/stone.scissors.paper.lizard.spock/env/bin/python3 -m pip install --upgrade pip' command.
-.PHONY:
-update-pip:
-	/Users/revi/dev/Squaduniverse/stone.scissors.paper.lizard.spock/env/bin/python3 -m pip install --upgrade pip
+run:
+	python3 -m flask run
 
+run-2:
+	python3 -m flask --app process/app.py run
 
-# # To build the python
+build:
+	docker build --tag python-docker .
 
-.PHONY:
-install-whell:
-# install wheel (to build packages in the bdist_wheel format)
-	pip install wheel
+build-with-tag:
+	docker build --tag python-docker:v1.0.0 .
 
-.PHONY:
-install-whell:
-# create the package
-	python setup.py bdist_wheel
+show-images:
+	docker images
 
+tag:
+	docker tag python-docker:latest python-docker:v1.0.0
 
-# install wheel (to build packages in the bdist_wheel format)
-pip install wheel
-# create the package
-python setup.py bdist_wheel
+remove-image-taged:
+	docker rmi python-docker:v1.0.0
+
+list-containers:
+	docker ps -a
+
+run-container:
+	docker run -d -p 3000:5000 --name rest-server python-docker:v1.0.0
+
+run-container-2:
+	docker run -d -p 3000:8080 --name rest-server python-docker:v1.0.0
+
+prune:
+	docker system prune -af
+
+create:
+	make build-with-tag
+	make run-container-2
