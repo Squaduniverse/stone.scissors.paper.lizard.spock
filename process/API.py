@@ -25,6 +25,7 @@ api.add_resource(Root, '/')  # add endpoints
 
 
 if __name__ == '__main__':
-    HOST = 'localhost'
+    # HOST = 'localhost'
+    HOST = '0.0.0.0'
     PORT = '3000'
     app.run(HOST, PORT)  # run our Flask app on port
