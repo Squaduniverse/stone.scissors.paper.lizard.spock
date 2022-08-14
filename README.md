@@ -6,6 +6,23 @@ Cuando no puedes decidir quién comenzará primero en el juego. Entonces solo ha
 
 # stone.scissors.paper.lizard.spock
 
+# Instructions
+
+# local
+Run in console
+
+  virtualenv environment
+  source ./environment/bin/activate
+  pip3 install -r requirements.txt
+  python3 -m flask run
+
+# Docker
+Run in console
+
+  docker build --tag python-docker:v1.0.0 .
+  docker run -d -p 3000:8080 --name rest-server python-docker:v1.0.0
+
+
 # Blogs
 [Installing private Python packages in Docker images](https://medium.com/packagr/installing-private-python-packages-in-a-docker-images-fb1872409ed0)
 

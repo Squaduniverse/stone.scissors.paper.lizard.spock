@@ -1,11 +1,13 @@
-FROM python:3.7-alpine
-ARG USER
-ARG PASS
-RUN echo "machine api.packagr.app \
-  "    login ${USER} \
-  "    password ${PASS}" > /root/.netrc
-RUN chown root ~/.netrc
-RUN chmod 0600 ~/.netrc
-COPY requirements.txt /requirements.txt
-RUN pip install -r requirements.txt
-CMD make-person
+# syntax=docker/dockerfile:1
+
+FROM python:3.11-rc-slim
+
+WORKDIR /app
+
+COPY requirements.txt requirements.txt
+
+RUN pip3 install -r requirements.txt
+
+COPY process process
+
+CMD python3 -m flask --app process/app.py run --host=0.0.0.0 --port=8080
